@@ -1,25 +1,20 @@
-import { NavLink } from "react-router-dom";
-import s from "./Navigation.module.css";
+import { Outlet } from "react-router-dom";
+import { Suspense } from 'react';
+import { Link, Container } from './Navigation.styled';
 
-
-const Navigation = () => (
-    <nav>
-        <NavLink
-            exact
-            to="/"
-            className={s.link}
-            activeClassName = {s.activeLink}>
-            Home
-        </NavLink>
-        <NavLink
-            to="/movies"
-            className={s.link}
-            activeClassName = {s.activeLink}>
-            Movies
-        </NavLink>
-        
-    </nav>
-);
+const Navigation = () => {
+  return (
+    <Container>
+      <nav >
+        <Link to={'/'}>Home</Link>
+        <Link to={'/movies'}>Movies</Link>
+      </nav >
+      <Suspense fallback={<div>Loading...</div>}>
+        <Outlet />
+      </Suspense>
+    </Container>
+  );
+};
 
 export default Navigation;
 
