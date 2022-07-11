@@ -1,4 +1,4 @@
-import { API_KEY } from '../Api/const';
+import { API_KEY } from '../Api/ApiKey';
 
 async function fetchWithErrorHandling(url = '') {
   const response = await fetch(url);

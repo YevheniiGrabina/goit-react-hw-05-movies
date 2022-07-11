@@ -1,7 +1,7 @@
 import { useParams } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import { getCast } from '../../services/fetchAPI';
-import { IMG_PATH } from '../../Api/const';
+import { IMG_PATH } from '../../Api/ApiKey';
 import s from './Cast.module.css';
 
 const Cast = () => {

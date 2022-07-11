@@ -2,7 +2,7 @@ import { getMovieDetails } from '../../services/fetchAPI';
 import { useState, useEffect, Suspense } from 'react';
 import { useParams, Link, Outlet, useLocation } from 'react-router-dom';
 import { AiOutlineArrowLeft } from 'react-icons/ai';
-import { IMG_PATH } from '../../Api/const';
+import { IMG_PATH } from '../../Api/ApiKey';
 import s from './MovieDetails.module.css';
 
 const MovieDetails = () => {
